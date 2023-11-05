@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/warinosuke1.css')  }}">
+    <script src="{{ url_for('static' , filename = 'js/warinosuke1.js')  }}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>割之介</title>
+    
+</head>
+<body>
+    <a href="/logout" class="logout">ログアウト</a>
+    <div class="container">
+        <h1 class="title">割之助</h1>
+
+        <div class="button003">
+            <a href="/warinosuke/{{ groupname }}/new">記録を追加</a>
+        </div>
+
+        <div class="record">
+            <table>
+                <thead>
+                    <tr>
+                        <th>支払い者</th>
+                        <th>受け取り人</th>
+                        <th>項目</th>
+                        <th>金額</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in range(payers|length) %} {# payersリストの要素数でループ #}
+                    <tr>
+                        <td>{{ payers[i] }}</td> {# 対応する要素を表示 #}
+                        <td>{{ recipients[i] }}</td>
+                        <td>{{ pays[i] }}</td>
+                        <td>￥{{ costs[i] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="result">
+            <table>
+                <thead>
+                    <tr>
+                        <th>支払いをする人</th>
+                        <th>支払いを貰う人</th>
+                        <th>金額</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for payer, recipient, amount in transactions %}
+                    <tr>
+                        <td>{{ payer }}</td>
+                        <td>{{ recipient }}</td>
+                        <td>￥{{ amount|int}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <a href="/warinosuke/{{ groupname }}/delete">旅行を削除</a>
+
+    </div>
+</body>
+</html>

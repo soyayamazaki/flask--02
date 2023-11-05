@@ -1,0 +1,161 @@
+/*割之介　画面１
+---------------------------------------------------------------------------*/
+body {
+    padding: 0;
+    margin: 0;
+    background: #596778;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+}
+
+.logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px; /* Adjust the padding as needed */
+    color: #FFF; /* Set the text color */
+    text-decoration: none; /* Remove underline */
+    background: #333; /* Set a background color */
+}
+
+
+.container {
+    display: flex; /* 親要素がフレックスコンテナになる */
+    flex-direction: column; /* 子要素を上から右に配置 */
+    align-items: center; /* 中央揃え（水平方向） */
+    justify-content: center; /* 中央揃え（垂直方向） */
+    background-color:whitesmoke ;
+    width: 50%;
+    margin:  100px auto; /*中央に配置する*/
+    border-radius: 4px;
+}
+
+/* ログインタイトルのスタイル */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+/*input部分
+---------------------------------------------------------------------------*/
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* アイコンスタイル */
+.input img {
+    width: 40px; /* アイコンの幅を調整 */
+    height: 40px; /* アイコンの高さを調整 */
+    margin-right: 10px; /* アイコンとファイル選択ボックスの間隔を調整 */
+    border-radius: 50%; /* アイコンを丸くする */
+    object-fit: cover; /* アイコンを切り取らずに表示 */
+    border: 1px solid #48c78e; /* 縁のスタイルを設定 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* アイコンに影を追加 */
+}
+
+.login-input {
+    height: 40px; /* 入力欄の高さを調整 */
+    border: 1px solid #ccc; /* 入力欄のボーダースタイルを設定 */
+    border-radius: 4px; /* 入力欄を角丸にする */
+    padding: 5px 10px; /* 入力欄の内側の余白を調整 */
+    font-size: 16px;
+}
+
+.login-input:focus {
+    border-color: #48c78e; /* フォーカス時にボーダーの色を変更 */
+    outline: none; /* フォーカス時のアウトラインを削除 */
+    box-shadow: 0 0 5px rgba(72, 199, 142, 0.5); /* フォーカス時に影を追加 */
+}
+
+/*追加ボタン
+---------------------------------------------------------------------------*/
+.addbutton {
+    margin-left: 10px;
+}
+
+/*メンバー名と削除
+---------------------------------------------------------------------------*/
+#member-list {
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    justify-content: center;
+}
+
+.listItem p,
+.listItem button {
+    margin:2px 10px 2px 0; 
+    
+}
+
+.listItem button {
+    appearance: none;
+    border: none;
+    background-color: none;
+    font-size: 10px;
+}
+
+.listItem button :hover {
+    background-color: blue;
+
+}
+
+#member-p {
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+}
+
+#member-p:before, #member-p:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 45px;
+    height: 2px;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+  
+#member-p:before {
+    left:0;
+}
+
+#member-p:after {
+    right: 0;
+}
+
+/*ログインボタン
+---------------------------------------------------------------------------*/
+#btn-submit {
+    color: white;
+    background-color:#48c78e;
+    border-color: transparent;
+    width: 120px;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#btn-submit:hover {
+    background-color: #3ec487;
+    border-color: transparent;
+    color: white;
+}
+

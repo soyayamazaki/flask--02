@@ -1,0 +1,90 @@
+/*ログイン
+---------------------------------------------------------------------------*/
+body {
+    padding: 0;
+    margin: 0;
+    background: #596778;
+    color: #EEEEEE;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+}
+ 
+.container {
+    display: flex; /* 親要素がフレックスコンテナになる */
+    flex-direction: column; /* 子要素を上から右に配置 */
+    align-items: center; /* 中央揃え（水平方向） */
+    justify-content: center; /* 中央揃え（垂直方向） */
+    background-color:whitesmoke ;
+    width: 50%;
+    margin:  auto; /*中央に配置する*/
+    border-radius: 4px;
+}
+
+
+/* ログインタイトルのスタイル */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* アイコンスタイル */
+.input img {
+    width: 40px; /* アイコンの幅を調整 */
+    height: 40px; /* アイコンの高さを調整 */
+    margin-right: 10px; /* アイコンとファイル選択ボックスの間隔を調整 */
+    border-radius: 50%; /* アイコンを丸くする */
+    object-fit: cover; /* アイコンを切り取らずに表示 */
+    border: 1px solid #48c78e; /* 縁のスタイルを設定 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* アイコンに影を追加 */
+}
+
+
+.login-input {
+    height: 40px; /* 入力欄の高さを調整 */
+    border: 1px solid #ccc; /* 入力欄のボーダースタイルを設定 */
+    border-radius: 4px; /* 入力欄を角丸にする */
+    padding: 5px 10px; /* 入力欄の内側の余白を調整 */
+    font-size: 16px;
+}
+
+.login-input:focus {
+    border-color: #48c78e; /* フォーカス時にボーダーの色を変更 */
+    outline: none; /* フォーカス時のアウトラインを削除 */
+    box-shadow: 0 0 5px rgba(72, 199, 142, 0.5); /* フォーカス時に影を追加 */
+}
+
+/*ログインボタン
+---------------------------------------------------------------------------*/
+#btn-submit {
+    color: white;
+    background-color:#48c78e;
+    border-color: transparent;
+    width: 100px;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#btn-submit:hover {
+    background-color: #3ec487;
+    border-color: transparent;
+    color: white;
+}
+
+/*目の写真
+---------------------------------------------------------------------------*/
+#view {
+    margin-left: 10px;
+    color: #333;
+    cursor: pointer;
+}

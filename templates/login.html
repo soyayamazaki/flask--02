@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/login.css')  }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>ログイン</title>
+</head>
+<body>
+    <h1>大学生のためのアプリ</h1>
+    <div class="container">
+        <h1 class="title">ログイン</h1>
+        <form method="post">
+            <div class="input">
+                <img src="{{ url_for('static' , filename = 'images/人物のアイコン素材.png' )}}" alt="人のアイコン">
+                <input type="text" name="username" class="login-input" placeholder="ユーザーネーム">
+            </div>
+            {% if error_message_name %}
+                <p class="error_message">{{ error_message_name }}</p>
+            {% endif %}
+
+            <div class="input">
+                <img src="{{ url_for('static' , filename = 'images/鍵のアイコン8.png' )}}" alt="鍵のアイコン">
+                <input type="password" name="password" class="login-input" placeholder="パスワード">
+                <span id="view">
+                    <!-- 目のアイコン -->
+                    <i class="far fa-eye-slash"></i>
+                </span>
+            </div>
+            {% if error_message_pass %}
+                <p class="error_message">{{ error_message_pass }}</p>
+            {% endif %}
+
+            <input type="submit" value="ログイン" id="btn-submit">
+        </form>
+        <p id="singup">まだ会員登録していない方&nbsp;&nbsp;&nbsp;<a href="/singup" id="singup-text">新規登録</a></p>
+    </div>
+    <script>
+        //パスワードの表示非表示
+        // id="view"を取得
+        let viewicon = document.getElementById('view');
+
+        // id="password"を取得
+        let inputtype = document.querySelector('input[type="password"]');
+
+        // id="view"クリック時の処理を設定
+        viewicon.addEventListener('click', function () {
+            // passwordからtextへ
+            if (inputtype.type === 'password') {
+                inputtype.type = 'text';
+                viewicon.innerHTML = '<i class="far fa-eye"></i>';
+            } else {
+                // textからpasswordへ
+                inputtype.type = 'password';
+                viewicon.innerHTML = '<i class="far fa-eye-slash"></i>';
+            }
+        });
+    </script>
+</body>
+</html>

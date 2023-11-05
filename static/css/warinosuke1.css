@@ -1,0 +1,151 @@
+/*割之介　画面１
+---------------------------------------------------------------------------*/
+body {
+    padding: 0;
+    margin: 0;
+    background: #596778;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+}
+
+.logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px; /* Adjust the padding as needed */
+    color: #FFF; /* Set the text color */
+    text-decoration: none; /* Remove underline */
+    background: #333; /* Set a background color */
+}
+
+
+.container {
+    display: flex; /* 親要素がフレックスコンテナになる */
+    flex-direction: column; /* 子要素を上から右に配置 */
+    align-items: center; /* 中央揃え（水平方向） */
+    justify-content: center; /* 中央揃え（垂直方向） */
+    background-color:whitesmoke ;
+    width: 50%;
+    margin:  100px auto; /*中央に配置する*/
+    border-radius: 4px;
+}
+
+/* ログインタイトルのスタイル */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+/*テーブル1
+---------------------------------------------------------------------------*/
+.record table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* ヘッダーセルのスタイル */
+.record th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+}
+
+/* データセルのスタイル */
+.record td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* 奇数行の背景色を設定 */
+.record tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* マウスホバー時のスタイル */
+.record tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* 金額セルのスタイル */
+.record td:nth-child(4) {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* テーブル全体のマージン */
+.record table {
+    margin: 20px 0;
+}
+
+/*テーブル2
+---------------------------------------------------------------------------*/
+.result table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* ヘッダーセルのスタイル */
+.result th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+}
+
+/* データセルのスタイル */
+.result td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* 奇数行の背景色を設定 */
+.result tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* マウスホバー時のスタイル */
+.result tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* 金額セルのスタイル */
+.result td:nth-child(3) {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* テーブル全体のマージン */
+.result table {
+    margin: 20px 0;
+}
+
+/*ボタン
+---------------------------------------------------------------------------*/
+.button003 {
+    margin-bottom: 20px;
+}
+
+.button003 a {
+    background: #3cb371;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 260px;
+    padding: 15px 50px;
+    color: white;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.button003 a:hover {
+    background: #008000;
+    color: #FFF;
+}
+
+

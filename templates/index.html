@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/index.css')  }}">
+    <title>TOPページ</title>
+</head>
+<body>
+    <a href="/logout" class="logout">ログアウト</a>
+    <div class="container">
+        <h1>大学生のためのアプリ</h1>
+        <nav class="menu">
+            <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+            <label class="menu-open-button" for="menu-open">
+             <span class="lines line-1"></span>
+             <span class="lines line-2"></span>
+             <span class="lines line-3"></span>
+           </label>
+         
+            <a href="/warinosuke" class="menu-item blue"><i class="fa-solid fa-money-bill"></i> </a>
+            <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
+            <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> </a>
+            <a href="#" class="menu-item purple"> <i class="fa fa-microphone"></i> </a>
+            <a href="#" class="menu-item orange"> <i class="fa fa-star"></i> </a>
+            <a href="#" class="menu-item lightblue"> <i class="fa-regular fa-circle-user"></i> </a>
+        </nav>
+    </div>
+</body>
+</html>
+

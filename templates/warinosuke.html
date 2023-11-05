@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/warinosuke.css')  }}">
+    <script src="{{ url_for('static' , filename = 'js/warinosuke.js')  }}"></script>
+    <title>割之介</title>
+</head>
+<body>
+    <a href="/logout" class="logout">ログアウト</a>
+    <div class="container">
+        <h1 class="title">割之助</h1>
+        <div class="warinosuke-container">
+            <div class="input">
+                <img src="{{ url_for('static' , filename = 'images/飛行機の無料素材.png' )}}" alt="飛行機のアイコン">
+                <input type="text" name="groupname" class="login-input" placeholder="グループ名" id="groupname">
+            </div>
+
+            <div class="input">
+                <img src="{{ url_for('static' , filename = 'images/人物のアイコン素材.png' )}}"  alt="人のアイコン">
+                <input type="username" name="username"  class="login-input" placeholder="メンバー" id="member">
+                <input type="button" value="追加" onclick="addmember()" class="addbutton">
+            </div>  
+
+            <div id="member-list">
+                <p id="member-p">メンバー</p>
+            </div>
+
+            <div id="error_message_member"></div>
+            
+            <input type="submit" value="グループを作成" id="btn-submit" onclick="postSend()">
+        </div>
+    </div>
+</body>
+</html>

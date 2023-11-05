@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/warinosuke2.css')  }}">
+<!--     <script src="{{ url_for('static' , filename = 'js/warinosuke2.js')  }}"></script>
+ -->    
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <title>割之介</title>
+    
+</head>
+<body>
+    <a href="/logout" class="logout">ログアウト</a>
+    <div class="container">
+        <h1 class="title">割之助</h1>
+        <form method="post">
+            <div id="record-input">
+                <div class="text">
+                    <select name="payer" id="name">
+                        {% for payer in payers %}
+                        <option value="{{ payer }}">{{ payer }}</option>
+                        {% endfor %}
+                    </select>
+                    <p>が</p>
+                </div>
+
+                <div class="text">
+                    {% for recipient in payers %}
+                    <input type="checkbox" name="recipients[]" value="{{ recipient }}" id="checkbox{{ loop.index }}">
+                    <label for="checkbox{{ loop.index }}">{{ recipient }}</label>
+                    {% endfor %}
+                    <p>の</p>
+                </div>
+
+                <div class="text">
+                    <input type="text" name="pay" id="pay" placeholder="例 : 食事代">
+                    <p>を払って</p>
+                </div>
+
+                <div class="text">
+                    <input type="number" name="cost" id="cost" placeholder="例 : 1000">
+                    <p>円かかった</p>
+                </div>
+            </div>
+
+            <input onclick="submit()" type="submit" value="登録" id="reg-submit">
+        </form>
+
+        <a href="/warinosuke/{{ groupname }}" id="back-submit">戻る</a>
+
+    </div>
+
+    <!-- <script>
+        document.getElementById('reg-submit').addEventListener('click', function(event) {
+            var payerSelect = document.getElementById('name').value;
+            var recipientsCheckboxes = document.querySelectorAll('[name="recipients[]"]');
+            var payInput = document.getElementById('pay').value;
+            var costInput = document.getElementById('cost').value;
+
+            if (!payerSelect || !payInput || !costInput) {
+                alert('全てのフィールドを入力してください.');
+                return false; // フォームの送信を中止
+            }
+
+            var atLeastOneRecipientChecked = false;
+            for (var i = 0; i < recipientsCheckboxes.length; i++) {
+                if (recipientsCheckboxes[i].checked) {
+                    atLeastOneRecipientChecked = true;
+                    break;
+                }
+            }
+
+            if (!atLeastOneRecipientChecked) {
+                alert('少なくとも1つの受取人を選択してください.');
+                return false; // フォームの送信を中止
+            }
+        })
+    </script> -->
+
+</body>
+</html>

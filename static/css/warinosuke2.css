@@ -1,0 +1,124 @@
+/*割之介　画面１
+---------------------------------------------------------------------------*/
+body {
+    padding: 0;
+    margin: 0;
+    background: #596778;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+}
+
+.logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px; /* Adjust the padding as needed */
+    color: #FFF; /* Set the text color */
+    text-decoration: none; /* Remove underline */
+    background: #333; /* Set a background color */
+}
+
+.container {
+    display: flex; /* 親要素がフレックスコンテナになる */
+    flex-direction: column; /* 子要素を上から右に配置 */
+    align-items: center; /* 中央揃え（水平方向） */
+    justify-content: center; /* 中央揃え（垂直方向） */
+    background-color:whitesmoke ;
+    width: 50%;
+    margin:  100px auto; /*中央に配置する*/
+    border-radius: 4px;
+}
+
+/* ログインタイトルのスタイル */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+/*文
+---------------------------------------------------------------------------*/
+.text {
+    display: flex;
+    align-items: center; /* 中央揃え（水平方向） */
+    justify-content: center; /* 中央揃え（垂直方向） */
+}
+
+
+/*ログインボタン
+---------------------------------------------------------------------------*/
+#reg-submit {
+    color: white;
+    background-color:#48c78e;
+    border-color: transparent;
+    width: 100px;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#reg-submit:hover {
+    background-color: #3ec487;
+    border-color: transparent;
+    color: white;
+}
+
+#back-submit {
+    color: #48c78e;
+    background-color:white;
+    border-color: 1px solid #48c78e;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #48c78e;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* 中央揃え（垂直方向） */
+    justify-content: center;
+}
+
+#back-submit:hover {
+    background-color: white;
+    border-color: 1px solid #3ec487;
+    color: #3ec487;
+}
+
+/*ドロップリスト
+---------------------------------------------------------------------------*/
+.text {
+    font-size: 15px;
+}
+
+.text p {
+    margin-left: 10px;
+}
+
+#name {
+    width: 250px;
+    height: 30px;
+}
+
+option {
+    font-size: 15px;
+}
+
+#checkbox {
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+}
+
+#pay {
+    width: 265px;
+    height: 20px;
+}
+
+#cost {
+    width: 250px;
+    height: 20px;
+}
