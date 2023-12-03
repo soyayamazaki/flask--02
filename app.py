@@ -11,7 +11,6 @@ import pytz
 import os
 
 
-
 app = Flask(__name__)
 
 #db定義
@@ -102,7 +101,7 @@ def singup():
         username = request.form.get('username')
         password = request.form.get('password')
 
-        user = User(username = username , password = generate_password_hash(password , method='sha256'))
+        user = User(username=username, password=generate_password_hash(password, method='pbkdf2:sha256'))
 
         db.session.add(user) #データベースに追加
         db.session.commit() #変更を保存する　必要
@@ -269,8 +268,9 @@ def delete(groupname):
 
     return redirect('/warinosuke')
 
-
-
+#2222
+#2222
+# flask  --app app run
 
 
 
