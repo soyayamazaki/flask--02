@@ -270,7 +270,7 @@ def delete(groupname):
 
 #2222
 #2222
-# flask  --app app run
+# flask  --app app run --debug
 
 
 
